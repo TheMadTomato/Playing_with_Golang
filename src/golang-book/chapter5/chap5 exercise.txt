@@ -1,0 +1,25 @@
+1. How do you access the fourth element of an array or slice?
+
+    x := [5]int64{98, 93, 77, 82, 83}
+    the fourth element in an array or slice is: x[3] = 82
+
+2. What is the length of a slice created using make([]int, 3, 9)?
+
+    the lenght of the slice is 3, and 9 is the lenght of the underlying array.
+
+3. Given the following array, what would x[2:5] give you?
+x := [6]string{"a","b","c","d","e","f"}
+
+    it would give c d  e f 
+
+Write a program that finds the smallest number in this list:
+x := []int{
+    48,96,86,68,
+    57,82,63,70,
+    37,34,83,27,
+    19,97, 9,17,
+}
+
+    check Ex5.go file
+
+    

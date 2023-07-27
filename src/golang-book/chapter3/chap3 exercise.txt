@@ -1,0 +1,28 @@
+1. What are two ways to create a new variable?
+
+    first way: var x int64 = 40
+    second way: x := 40
+
+2. What is the value of x after running x := 5; x += 1?
+
+    6
+
+3. What is scope? How do you determine the scope of a variable in Go?
+
+    In simple terms, a scope is the range of places where a program is allowed a certain variable.
+    to declare it in go it is simple like other languages if it is not inside a block it's global
+    acceseible by other functions, otherwise it is inside a block of code and called local scope,
+    only accesesible by the function that contains it.
+
+4. What is the difference between var and const?
+    
+    var's value can change. const don'terms
+
+5. Using the example program as a starting point, write a program that converts
+from Fahrenheit into Celsius (C = (F − 32) * 5/9).
+
+    Check Ex5.go file
+
+6. Write another program that converts from feet into meters (1 ft = 0.3048 m).
+    
+    check Ex6.go file
