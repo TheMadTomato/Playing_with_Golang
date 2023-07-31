@@ -1,0 +1,53 @@
+# I am not proud of the fact that these answers are generated but i was incapable of giving a clear answer for i do not have a strong grasp of OOP and struct concepts over all
+# So these particularly answer, which i only generated it with AI in this chapter, serves as booklets to me so i can better learn.
+
+1. What’s the difference between a method and a function?
+
+    Method:
+
+        > A method is a function that is associated with a specific type or struct.
+        > It is invoked using a receiver, which is an instance of the type or struct.
+        > The receiver is passed as an argument to the method and allows the method to access the properties and behavior of the receiver.
+        > Methods are defined using the syntax func (r ReceiverType) MethodName().
+        > Methods can be used to provide behavior specific to a type or struct and are commonly used in object-oriented programming.
+
+    Function:
+
+        > A function in Go is standalone code that can be invoked from any package.
+        > It is not associated with a specific type or struct.
+        > Functions are defined using the syntax func FunctionName().
+        > Functions can be used for general-purpose tasks and can be called directly without a receiver.
+
+    In summary, the key differences between a method and a function in Go are:
+
+        > A method is associated with a specific type or struct and is invoked using a receiver, while a function is standalone and can be called directly.
+        > Methods can access the properties and behavior of the receiver, while functions cannot.
+
+2. Why would you use an embedded anonymous field instead of a normal named
+field?
+
+
+    Embedded Anonymous Field:
+
+        > An embedded anonymous field is a field without a name in a struct or an interface.
+        > It can be a struct type or an interface type.
+        > It allows the fields of the embedded type to be accessed as if they were fields of the outer type.
+        > It can be used to achieve code reuse and composition by embedding a struct into another struct.
+        > It can simplify the code by reducing the amount of boilerplate code required to access the fields of the embedded struct.
+
+    Normal Named Field:
+
+        > A normal named field is a field with a name in a struct or an interface.
+        > It is used to store data that is specific to the struct or interface.
+        > It cannot be used to access the fields of another struct or interface.
+
+    In summary, the key reasons to use an embedded anonymous field instead of a normal named field in Go are:
+
+        > An embedded anonymous field allows the fields of the embedded type to be accessed as if they were fields of the outer type, 
+        which can simplify the code and achieve code reuse and composition.
+        > A normal named field is used to store data that is specific to the struct or interface and cannot be used to access the fields of another struct or interface.
+
+3. Add a new perimeter method to the Shape interface to calculate the perimeter of
+a shape. Implement the method for Circle and Rectangle.
+
+    check the Ex3.go file
