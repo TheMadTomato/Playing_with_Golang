@@ -1,0 +1,22 @@
+1. Why do we use packages?
+
+    packages make our life easier, its main purpose is to avoid repeating the same code by storing our codes that do one specific task and do it well in one packages
+
+2. What is the difference between an identifier that starts with a capital letter and
+one that doesn’t (e.g., Average versus average)?
+
+    In Go, if something starts with a capital letter, that means other
+    packages (and programs) are able to see it. If we had named the function average
+    instead of Average, our main program would not have been able to see it.
+
+3. What is a package alias? How do you make one?
+
+    If we wanted to use both libraries in the same program, Go allows us to
+    use an alias. we add it between import and the package in between ""
+
+4. We copied the average function from Chapter 6 to our new package. Create Min
+and Max functions that find the minimum and maximum values in a slice of
+float64s.
+
+    go install is not working
+
