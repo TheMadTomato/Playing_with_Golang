@@ -1,0 +1,68 @@
+1. sum is a function that takes a slice of numbers and adds them together. What
+would its function signature look like in Go?
+
+    in golang, a function signature would be defined by its parameters and return type.
+    and for function like sum the signature would look somthing like this:
+        func sum(numbers []float64)float64{
+            total := 0.0
+            for _, value := range numbers{
+                total += value
+            }
+            return total
+        }
+    added how would the full function would look like
+
+2. Write a function that takes an integer and halves it and returns true if it was even
+or false if it was odd. For example, half(1) should return (0, false) and
+half(2) should return (1, true).
+
+    Check the Ex2.go file
+
+3. Write a function with one variadic parameter that finds the greatest number in a
+list of numbers.
+
+    check the Ex3.go file
+
+4. Using makeEvenGenerator as an example, write a makeOddGenerator function
+that generates odd numbers
+
+    check the Ex4.go file
+
+5. The Fibonacci sequence is defined as: fib(0) = 0, fib(1) = 1, fib(n) =
+fib(n-1) + fib(n-2). Write a recursive function that can find fib(n).
+
+    check the Ex5.go file
+
+6. What are defer, panic, and recover? How do you recover from a runtime panic?
+
+    defer is a staetment that make the function that declared after it to execute the last in a program. very useful in scenarios of opening and closing folder and making the code more readble, plus it will still run if panic occures
+    Panic indicate a programmers error and recover helps in igonoring the error. in a way the combination of these 2 calls is very similar to cin.ignore() and cin.clear() calls in c++, cz they serve the same perpose of handling errors.
+
+7. How do you get the memory address of a variable?
+
+    using the & operator before a pointer variable
+
+8. How do you assign a value to a pointer?
+
+    assiginin a pointer is ez we first delcare the variable name add an "*" follwed with the variable type: i.e. num  *int64
+    and to assigne it we should do somthing called derfrencing --> *num = 9
+
+9. How do you create a new pointer?
+
+    accidently answerd this question in the previous question number 8
+
+10. What is the value of x after running this program:
+    func square(x *float64) {
+        *x = *x * *x
+    }
+    func main() {
+        x := 1.5
+        square(&x)
+    }
+
+        output --> 1.5 * 1.5 = 2.25
+
+11. Write a program that can swap two integers (x := 1; y := 2; swap(&x, &y)
+should give you x=2 and y=1).
+
+    check the Ex11.go file
