@@ -1,6 +1,3 @@
-# I am not proud of the fact that these answers are generated but i was incapable of giving a clear answer for i do not have a strong grasp of OOP and struct concepts over all
-# So these particularly answer, which i only generated it with AI in this chapter, serves as booklets to me so i can better learn.
-
 1. What’s the difference between a method and a function?
 
     Method:
@@ -51,3 +48,5 @@ field?
 a shape. Implement the method for Circle and Rectangle.
 
     check the Ex3.go file
+
+This youtube vide helped me in this chapter: https://youtu.be/CcUQbk0M3vY
