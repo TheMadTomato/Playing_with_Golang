@@ -5,23 +5,44 @@ import (
 	"strings"
 )
 
+func checkAlphabet(input string, alphabet []string) []int {
+	//declare where the index will be saved
+	indexes := []int{}
+	//for each char in the input
+	for _, char := range input {
+		//check if said char is in the alphabet array
+		for i, letter := range alphabet {
+			if strings.ToUpper(string(char)) == letter {
+				indexes = append(indexes, i)
+				break
+			}
+		}
+	}
+	return indexes
+}
+
 func main() {
-	//intitializing the core list
+	//initializing the core list
 	var alphabet []string
 	for i := 'A'; i <= 'Z'; i++ {
 		alphabet = append(alphabet, string(i))
 	}
-	//take the input of the diffirating factor
+
+	//take the input of the differentiating factor
 	var diffFactor int
 	fmt.Println("Enter the diff factor")
-	fmt.Scanf("%d", &diffFactor)
+	fmt.Scanln(&diffFactor)
 
-	//appending the changes
+	//Print the Original Alphabet table
+	fmt.Println(alphabet)
+
+	//Initialize the arrays to store the edited array, Pos for when the diffFactor>0 and Neg is for when diffFactor<0
 	var Pos_alphabet []string
 	var Neg_alphabet []string
 	Pos_alphabet = alphabet
 	Neg_alphabet = alphabet
-	//initializing the appended lists
+
+	//appending the arrays
 	if diffFactor > 0 && diffFactor < 25 {
 		//if +diffFactor
 		firstLetters := Pos_alphabet[:diffFactor]
@@ -35,19 +56,23 @@ func main() {
 		Neg_alphabet = append(lastLetters, remaining...)
 		fmt.Println(Neg_alphabet)
 	}
-	fmt.Println(alphabet)
 
+	//Taking the input from user
 	var input string
 	fmt.Println("Enter input: ")
 	fmt.Scanln(&input)
 	fmt.Println("Original input: ", input)
 
-	var indexes []int
-	for i, char := range alphabet {
-		if strings.ContainsRune(input, rune(char)) {
-			indexes = append(indexes, i)
-		}
-	}
-
+	//Storing the indexes of the input's each char in the original alphabet table
+	indexes := checkAlphabet(strings.ToUpper(input), alphabet)
 	fmt.Println("Indexes:", indexes)
+
+	//Using the indexes value in the appended alphabet table to get the encrypted input
+	new_input := make([]string, len(indexes))
+	if diffFactor > 0 && diffFactor < 25 {
+		for i := 0; i < len(indexes); i++ {
+			new_input[i] = Pos_alphabet[indexes[i]-diffFactor]
+		}
+		fmt.Println(new_input)
+	}
 }
