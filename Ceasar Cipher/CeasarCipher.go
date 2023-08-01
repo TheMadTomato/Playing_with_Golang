@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/inancgumus/screen"
 )
 
 func checkAlphabet(input string, alphabet []string) []int {
@@ -104,6 +106,9 @@ func main() {
 		default:
 			fmt.Println("\033[31mInvalid Input! Idiotka!\033[0m")
 		}
+
+		//only equivalent i found to system("cls")
+		screen.Clear()
 
 		//beak condition (this syntax of for{ if{break}} is the way we can achieve something like do-while in golang)
 		if choice == 3 {
