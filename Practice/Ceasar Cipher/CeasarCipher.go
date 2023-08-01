@@ -71,8 +71,13 @@ func main() {
 	new_input := make([]string, len(indexes))
 	if diffFactor > 0 && diffFactor < 25 {
 		for i := 0; i < len(indexes); i++ {
-			new_input[i] = Pos_alphabet[indexes[i]-diffFactor]
+			new_input[i] = Pos_alphabet[indexes[i]]
 		}
-		fmt.Println(new_input)
+		fmt.Println("After Encryption: ", new_input)
+	} else if diffFactor < 0 && diffFactor > -25 {
+		for i := 0; i < len(indexes); i++ {
+			new_input[i] = Neg_alphabet[indexes[i]]
+		}
+		fmt.Println("After Encryption: ", new_input)
 	}
 }
